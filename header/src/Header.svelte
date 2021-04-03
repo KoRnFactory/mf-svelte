@@ -1,8 +1,5 @@
 <script>
-  let count = 0;
-  window.addToCart = () => {
-    count += 1;
-  }
+  import {value} from "./stores";
 </script>
 <style>
   header {
@@ -15,5 +12,5 @@
 </style>
 <header>
   <div>My Svelte Header III</div>
-  <div>{count}</div>
+  <div>{$value}</div>
 </header>

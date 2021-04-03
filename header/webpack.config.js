@@ -32,6 +32,7 @@ module.exports = {
           options: {
             emitCss: true,
             hotReload: true,
+            dev: !prod,
           },
         },
       },
@@ -59,8 +60,9 @@ module.exports = {
       remotes: {},
       exposes: {
         "./Header": "./src/Header.svelte",
+        "./stores": "./src/stores.js"
       },
-      shared: require("./package.json").dependencies,
+      shared: ["svelte", "svelte/store"],
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
